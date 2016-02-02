@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="603.0" prefWidth="454.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mongotableview.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TextField fx:id="tfName" layoutX="52.0" layoutY="230.0" onAction="#tfName" />
+      <TextField fx:id="tfGruppa" layoutX="253.0" layoutY="230.0" onAction="#tfGruppa" />
+      <Button fx:id="btn" layoutX="169.0" layoutY="260.0" mnemonicParsing="false" onAction="#btn" text="Добавить студента" />
+      <Button fx:id="btn1" layoutX="172.0" layoutY="295.0" mnemonicParsing="false" onAction="#btn1" text="Удалить студента" />
+      <Button fx:id="btnUp" layoutX="172.0" layoutY="329.0" mnemonicParsing="false" onAction="#btnUp" text="Обновить данные" />
+      <TextField fx:id="search" layoutX="16.0" layoutY="273.0" onAction="#search" />
+      <Label layoutX="113.0" layoutY="214.0" text="Name" />
+      <Label layoutX="314.0" layoutY="214.0" text="Gruppa" />
+      <Label layoutX="77.0" layoutY="257.0" text="Search" />
+      <ComboBox layoutX="289.0" layoutY="273.0" prefWidth="150.0" />
+      <ListView layoutX="18.0" layoutY="368.0" prefHeight="220.0" prefWidth="425.0" />
+      <TableView fx:id="tableStudents" layoutX="19.0" layoutY="20.0" onSort="#tableStudents" prefHeight="189.0" prefWidth="425.0">
+        <columns>
+            <TableColumn fx:id="id" onEditStart="#id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="name" onEditStart="#name" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="gruppa" onEditStart="#gruppa" prefWidth="75.0" text="Group" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>
